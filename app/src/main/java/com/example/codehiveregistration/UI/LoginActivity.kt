@@ -13,7 +13,6 @@ import com.example.codehiveregistration.Api.ApiClient
 import com.example.codehiveregistration.Api.ApiInterface
 import com.example.codehiveregistration.Models.LoginRequest
 import com.example.codehiveregistration.Models.LoginResponse
-import com.example.codehiveregistration.R
 import com.example.codehiveregistration.ViewModels.UserViewModel
 import com.example.codehiveregistration.databinding.ActivityLoginBinding
 import retrofit2.Call
@@ -29,7 +28,7 @@ class LoginActivity : AppCompatActivity() {
 //    lateinit var pbLoading2:ProgressBar
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login)
+        setContentView(binding.root)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 //        castViews()
         clickButton()
