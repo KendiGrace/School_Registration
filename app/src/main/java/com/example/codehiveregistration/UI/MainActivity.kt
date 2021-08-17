@@ -10,7 +10,6 @@ import com.example.codehiveregistration.Api.ApiClient
 import com.example.codehiveregistration.Api.ApiInterface
 import com.example.codehiveregistration.Models.RegistrationRequest
 import com.example.codehiveregistration.Models.RegistrationResponse
-import com.example.codehiveregistration.R
 import com.example.codehiveregistration.ViewModels.UserViewModel
 import com.example.codehiveregistration.databinding.ActivityMainBinding
 import retrofit2.Call
@@ -31,7 +30,7 @@ class MainActivity : AppCompatActivity() {
 //    lateinit var pbLoading:ProgressBar
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(binding.root)
         castViews()
     }
     fun castViews(){
