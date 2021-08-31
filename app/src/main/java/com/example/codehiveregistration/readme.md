@@ -58,3 +58,30 @@
 
 lateinit var etEmail2:EditText lateinit var etPass2:EditText lateinit var btnLogin:Button lateinit
 var pbLoading2:ProgressBar
+
+// // var retrofit = ApiClient.buildApiClient(ApiInterface::class.java)
+// var request = retrofit.registerStudent(regRequest)
+// request.enqueue(object : Callback<RegistrationResponse> { // override fun onResponse(call:
+Call<RegistrationResponse>, response: Response<RegistrationResponse>) { // pbLoading.visibility =
+View.GONE // if (response.isSuccessful) { // Toast.makeText(baseContext, "Your registration is
+Successful", Toast.LENGTH_SHORT).show()
+
+// } else { // Toast.makeText(baseContext, response.errorBody()?.toString(), Toast.LENGTH_SHORT)
+.show()
+// } // // } // // override fun onFailure(call: Call<RegistrationResponse>, t: Throwable) { //
+Toast.makeText(baseContext, "Your Registration request can not be completed at this time,please try
+again later", Toast.LENGTH_LONG).show()
+// pbLoading.visibility = View.GONE // // } // // })
+} // pbLoading=findViewById(R.id.pbLoading)
+// tvTitle=findViewById(R.id.tvTitle)
+// etName=findViewById(R.id.etName)
+// etDob=findViewById(R.id.etDob)
+// etPhone=findViewById(R.id.etPhone)
+// etEmail=findViewById(R.id.etEmail)
+// etPassword=findViewById(R.id.etPassword)
+// btnRegister=findViewById(R.id.btnRegister)
+// spNationality=findViewById(R.id.spNationality)
+// lateinit var tvTitle:TextView // lateinit var etName:EditText // lateinit var etPhone:EditText //
+lateinit var etDob:EditText // lateinit var etEmail:EditText // lateinit var etPassword:EditText //
+lateinit var spNationality:Spinner // lateinit var btnRegister:Button // lateinit var pbLoading:
+ProgressBar

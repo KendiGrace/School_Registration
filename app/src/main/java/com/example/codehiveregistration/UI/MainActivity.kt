@@ -14,26 +14,17 @@ import com.example.codehiveregistration.ViewModels.UserViewModel
 import com.example.codehiveregistration.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-    lateinit var binding:ActivityMainBinding
+    lateinit var binding: ActivityMainBinding
     val userViewModel: UserViewModel by viewModels()
     lateinit var sharedPrefs: SharedPreferences
-//    lateinit var tvTitle:TextView
-//    lateinit var etName:EditText
-//    lateinit var etPhone:EditText
-//    lateinit var etDob:EditText
-//    lateinit var etEmail:EditText
-//    lateinit var etPassword:EditText
-//    lateinit var spNationality:Spinner
-//    lateinit var btnRegister:Button
-//    lateinit var pbLoading:ProgressBar
-override fun onCreate(savedInstanceState: Bundle?) {
-    super.onCreate(savedInstanceState)
-    binding = ActivityMainBinding.inflate(layoutInflater)
-    setContentView(binding.root)
-    sharedPrefs = getSharedPreferences(Constants.Prefs_File, Context.MODE_PRIVATE)
-    castViews()
-    RedirectUser()
-}
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        sharedPrefs = getSharedPreferences(Constants.Prefs_File, Context.MODE_PRIVATE)
+        castViews()
+        RedirectUser()
+    }
 
     fun RedirectUser() {
         var token = sharedPrefs.getString(Constants.Access_Token, Constants.EmptyString)
@@ -44,16 +35,6 @@ override fun onCreate(savedInstanceState: Bundle?) {
     }
 
     fun castViews() {
-//        pbLoading=findViewById(R.id.pbLoading)
-//        tvTitle=findViewById(R.id.tvTitle)
-//        etName=findViewById(R.id.etName)
-//        etDob=findViewById(R.id.etDob)
-//        etPhone=findViewById(R.id.etPhone)
-//        etEmail=findViewById(R.id.etEmail)
-//        etPassword=findViewById(R.id.etPassword)
-//        btnRegister=findViewById(R.id.btnRegister)
-//        spNationality=findViewById(R.id.spNationality)
-
         var nationalities = arrayOf(
             "choose country",
             "Kenyan",
@@ -67,11 +48,9 @@ override fun onCreate(savedInstanceState: Bundle?) {
         var nationalitiesAdapter =
             ArrayAdapter(baseContext, android.R.layout.simple_spinner_dropdown_item, nationalities)
         nationalitiesAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-        binding.spNationality.adapter=nationalitiesAdapter
+        binding.spNationality.adapter = nationalitiesAdapter
 
         clickButtons()
-
-
     }
 
     fun clickButtons() {
@@ -127,29 +106,6 @@ override fun onCreate(savedInstanceState: Bundle?) {
                 .show()
         })
     }
-//
-//                var retrofit = ApiClient.buildApiClient(ApiInterface::class.java)
-//                var request = retrofit.registerStudent(regRequest)
-//                request.enqueue(object : Callback<RegistrationResponse> {
-//                    override fun onResponse(call: Call<RegistrationResponse>, response: Response<RegistrationResponse>) {
-//                        pbLoading.visibility = View.GONE
-//                        if (response.isSuccessful) {
-//                            Toast.makeText(baseContext, "Your registration is Successful", Toast.LENGTH_SHORT).show()
-
-//                        } else {
-//                            Toast.makeText(baseContext, response.errorBody()?.toString(), Toast.LENGTH_SHORT).show()
-//                        }
-//
-//                    }
-//
-//                    override fun onFailure(call: Call<RegistrationResponse>, t: Throwable) {
-//                        Toast.makeText(baseContext, "Your Registration request can not be completed at this time,please try again later", Toast.LENGTH_LONG).show()
-//                        pbLoading.visibility = View.GONE
-//
-//                    }
-//
-//                })
-            }
-
+}
 
 

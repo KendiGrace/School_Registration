@@ -2,6 +2,7 @@ package com.example.codehiveregistration.Repository
 
 import com.example.codehiveregistration.Api.ApiClient
 import com.example.codehiveregistration.Api.ApiInterface
+import com.example.codehiveregistration.Models.Course
 import com.example.codehiveregistration.Models.CourseResponse
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
@@ -13,5 +14,4 @@ class CourseRepository {
         withContext(Dispatchers.IO) {
             return@withContext retrofit.fetchCourses(accessToken)
         }
-
 }
