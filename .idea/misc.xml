@@ -7,7 +7,10 @@
         <entry key="app/src/main/res/layout/activity_courses.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
+<<<<<<< HEAD
         <entry key="app/src/main/res/layout/coourse_list.xml" value="0.25" />
+=======
+>>>>>>> 518a6c6497410ad8711186edd2ce4f0cdca4f3b7
         <entry key="app/src/main/res/layout/coourse_lists.xml" value="0.25" />
         <entry key="app/src/main/res/layout/course_list.xml" value="0.1" />
         <entry key="app/src/main/res/layout/roundedcorners.xml" value="0.16041666666666668" />

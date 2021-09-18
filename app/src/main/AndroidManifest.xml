@@ -10,7 +10,10 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+<<<<<<< HEAD
         android:usesCleartextTraffic="true"
+=======
+>>>>>>> 518a6c6497410ad8711186edd2ce4f0cdca4f3b7
         android:theme="@style/Theme.CodeHiveRegistration">
         <activity
             android:name=".UI.LoginActivity"
