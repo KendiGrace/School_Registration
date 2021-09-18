@@ -30,6 +30,11 @@ class CoursesActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
+        CourseViewModel.getDBCourses()
+        CourseViewModel.coursesResponseLiveData.observe(this{
+            courses
+        })
+
         var accessToken = sharedPreferences.getString(Constants.toString(), "Access_Token")
         var bearer = "Bearer $accessToken"
         if (accessToken!!.isNotEmpty()) {
